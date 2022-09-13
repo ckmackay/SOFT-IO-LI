@@ -24,19 +24,33 @@ low, but for now they are all assumed to be due to aircraft.
 
 The final plumes are then analysed and saved into a seperate txt file for each
 flight. For each plume identified the following information is saved:
+
 ..* Plume start ID
+
 ..* Plume end ID
+
 ..* Date start
+
 ..* Time start
+
 ..* Date end
+
 ..* Time end
+
 ..* Longitude start
+
 ..* Longitude end
+
 ..* Latitude start
+
 ..* Latitude end
+
 ..* Pressure start
+
 ..* Pressure end
+
 ..* Altitude start
+
 ..* Altitude end
 
 The txt files are stored in /o3p/iagos/SOFT-IO-LI/Plume_info_all_cuts/ and used by
@@ -46,8 +60,11 @@ At the same time the date and time for the arrival of each flight is stored in
 /o3p/iagos/SOFT-IO-LI/flight_time_txt/ as:
 
 ..* year
+
 ..* month
+
 ..* day
+
 ..* hour
 
 This is used in programme 2 to set the start and end times and dates of the
