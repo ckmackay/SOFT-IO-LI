@@ -3,7 +3,9 @@ SOFT-IO-LI code September 2022
 SOFT-IO-LI v1
 
 Catherine Mackay 2022
+
 catherine.mackay@aero.obs-mip.fr (Until end of 2022)
+
 ck8mackay@gmail.com
 
 ## SOFT-IO-LI is split into three seperate programmes.
