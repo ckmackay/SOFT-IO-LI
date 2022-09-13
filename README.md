@@ -84,22 +84,22 @@ to check these plots to make sure the plumes look sensible, so far so good.
 SOFT-IO-LI uses FLEXPART release 10.4 and the following files in the source code
 were modified:
 
-1. par_mod.f was modified at line 143 to allow for the 0.5° ERA5 ECMWF data.
+### par_mod.f was modified at line 143 to allow for the 0.5° ERA5 ECMWF data.
 
 flexpart10.4/flexpart_v10.4_3d7eebf/src/ contains 3 FLEXPART compilations:
 
-### FLEXPART for 1°:
+- FLEXPART for 1°:
 integer,parameter :: nxmax=361,nymax=181,nuvzmax=138,nwzmax=138,nzmax=138,nxshift=359 ! 1.0 degree 138 level
 
-### FLEXPART_05 for 0.5°:
+- FLEXPART_05 for 0.5°:
 integer,parameter :: nxmax=721,nymax=361,nuvzmax=138,nwzmax=138,nzmax=138,nxshift=359  ! 0.5 degree 138 level
 
-### FLEXPART 0.25 for 0.25°
+- FLEXPART 0.25 for 0.25°
 integer,parameter :: nxmax=1441,nymax=721,nuvzmax=138,nwzmax=138,nzmax=138,nxshift=359  ! 0.25 degree 138 level
 
 SOFT-IO-LI uses FLEXPART_05 as default.
 
-2. makefile was modified to allow compilation on nuwa.
+### makefile was modified to allow compilation on nuwa.
 
 
 
