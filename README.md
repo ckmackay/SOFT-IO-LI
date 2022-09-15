@@ -78,6 +78,31 @@ to check these plots to make sure the plumes look sensible, so far so good.
 
 ### 2. FLEXPART_auto.ipynb
 
+FLEXPART_auto uses the contents of FLEXPART_templates to create a FLEXPART
+directory for each flight.
+
+This is located in
+/o3p/user/SOFT-IO-LI/flexpart10.4/flexpart_v10.4_3d7eebf/src/exercises/soft-io-li/YYYY/MM/flight_id/
+
+It then uses the outputs from the first programme to create the following
+control files required by FLEXPART which are unique for each flight.
+
+- AVAILABLE
+
+- COMMAND
+
+- pathnames
+
+- RELEASES
+
+Once these are all in place it checks the meteo files are stored locally and
+if so launches the FLEXPART simulation.
+
+If they are not (at present we are waiting for ERA5 to be available to us) a
+warning is given.
+
+They can then be launched seperately using the submit_FLEXPART.ipynb programme.
+
 ### 3. 
 
 ********************************************************************************
