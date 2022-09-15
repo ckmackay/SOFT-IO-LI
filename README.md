@@ -81,6 +81,69 @@ to check these plots to make sure the plumes look sensible, so far so good.
 ### 3. 
 
 ********************************************************************************
+## User Guide
+
+SOFT-IO-LI is written in Python 3 and can be run either as batch jobs on nuwa
+using the .py files, or alternatively, interactively using JupyterLab on nuwa
+using the .ipynb files. JupyterLab allows you to view plots immediately and is
+quick even when running over many flights.
+
+SOFT-IO-LI files and directories are stored on nuwa in the iagos space:
+/o3p/iagos/SOFT-IO-LI/
+
+Please do not edit the .ipynb or .py files here.
+To test changes please edit copies in your user space.
+A copy of this version is available from Github in case of problems:
+https://github.com/ckmackay/SOFT-IO-LI.git
+
+In order to run the SOFT-IO-LI programmes in JupyterLab follow the
+instructions given for using conda and launching JupyterLab on nuwa
+(http://nuwa.aero.obs-mip.fr/CondaNuwa).
+
+On nuwa in your own space /home/user/ create a SOFT-IO-LI directory.
+
+Make a copy of /o3p/iagos/SOFT-IO-LI/ locally, for example /o3p/user/SOFT-IO-LI/
+
+The environment used for SOFT-IO-LI is saved in environment.yml
+
+Create the environment where you will launch JupyterLab from, for example,
+/home/user/SOFT-IO-LI using:
+
+	conda env create -f environment.yml
+
+Activate the environment, which is called hvenv, using:
+
+	conda activate hvenv
+
+Verify the environment is installed correctly using:
+
+        conda env list
+
+hvenv should now be in your list of conda environments.
+
+At the start of each session to use SOFT-IO-LI, activate the hvenv environment
+using:
+	conda activate hvenv
+
+(hvenv) will now appear at the start of each command line.
+
+Copy the SOFT-IO-LI files to your local directory /home/user/SOFT-IO-LI/
+
+If you are using Jupyter lab copy the *.ipynb files, otherwise copy the .py
+and corresponding .sh files.
+
+Each programme contains the imports first and if the hvenv environment is
+correctly activated there will be no problems with the imports.
+
+The paths are set next.
+
+You will need the change the /user/ to your user id for the paths.
+
+Once this is done you should be able to run the programmes and see the output.
+
+Any problems send a mail to catherine.mackay@aero.obs_mip.fr
+
+********************************************************************************
 ## FLEXPART requirements
 
 SOFT-IO-LI uses FLEXPART release 10.4 and the following files in the source code
