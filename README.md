@@ -117,7 +117,7 @@ Activate the environment, which is called hvenv, using:
 
 Verify the environment is installed correctly using:
 
-        conda env list
+	conda env list
 
 hvenv should now be in your list of conda environments.
 
