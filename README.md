@@ -103,7 +103,9 @@ warning is given.
 
 They can then be launched seperately using the submit_FLEXPART.ipynb programme.
 
-### 3. 
+********************************************************************************
+********************************************************************************
+
 Before running the third program, the user must download and prepare the
 corresponding cloud and lightning data that will be used for the comparisons
 with the FLEXPART maximum residence time outputs produced by program 2. 
@@ -170,6 +172,11 @@ When it finishes:
 In jupyter, use GLM_grouping_by_lon_lat.ipynb to preprocess data
 
 ********************************************************************************
+
+### 3. tbc.ipynb
+
+********************************************************************************
+
 ## User Guide
 
 SOFT-IO-LI is written in Python 3 and can be run either as batch jobs on nuwa
