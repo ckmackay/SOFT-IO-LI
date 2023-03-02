@@ -104,6 +104,70 @@ warning is given.
 They can then be launched seperately using the submit_FLEXPART.ipynb programme.
 
 ### 3. 
+Before running the third program, the user must download and prepare the
+corresponding cloud and lightning data that will be used for the comparisons
+with the FLEXPART maximum residence time outputs produced by program 2. 
+
+********************************************************************************
+For ABI cloud data:
+
+ftp to collect ABI cloud data from ICARE Lille
+
+For 2015:
+#########
+	ftp -i ftp.icare.univ-lille1.fr
+	username
+	password
+	cd /SPACEBORNE/GEO/GOES-0750/GEO_L1B/2015/2015_07_01
+	lcd /o3p/usr/test/ABI/2015/182
+	mget GEO_L1B-GOES13_2015-07-01T*_G_IR107_V1-06.hdf
+
+	bye
+
+For 2018:
+#########
+	ftp -i ftp.icare.univ-lille1.fr
+	username
+	password
+	cd /SPACEBORNE/GEO/GOESNG-0750/GEO_L1B/2018/2018_05_30
+	lcd /o3p/usr/test/ABI/150
+	mget GEO_L1B-GOES16_2018-05-30T*_G_IR103_V1-06.hdf
+	bye
+
+In jupyter, use GOES_ABI_2015.ipynb or GOES_ABI.ipynb to preprocess data, just
+update the input data of day and date
+
+********************************************************************************
+For GLM lightning data:
+
+ftp to collect GLM lightning data from ICARE Lille
+
+	ftp -i ftp.icare.univ-lille1.fr
+	username
+	password
+	cd /SPACEBORNE/GEO/GOESNG-0750/GLM/2018/2018_05_30
+	lcd /o3p/usr/glm/OR_GLM-L2-LCFA_G16_s2018150/temp_00
+	mget OR_GLM-L2-LCFA_G16_s201815000*
+
+	bye
+
+On nuwa need to untar the GLM files and create a single netCDF file for each
+hour using ncrcat
+
+	cd /o3p/usr/glm/OR_GLM-L2-LCFA_G16_s2018150/temp_00
+	conda activate GLM_test
+	tar -xavf OR_GLM-L2-LCFA_G16_s20181511600000_e20181511615000_c2018151162527.tgz 
+	ncrcat -h *.nc GLM_array_151_20-21.nc
+	ncrcat -h *.nc GLM_array_150_00-01.nc
+
+When it finishes:
+
+	mv GLM_array_151_20-21.nc ../
+	rm *
+	cd ../
+	rmdir temp_00
+
+In jupyter, use GLM_grouping_by_lon_lat.ipynb to preprocess data
 
 ********************************************************************************
 ## User Guide
