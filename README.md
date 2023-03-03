@@ -103,12 +103,40 @@ warning is given.
 
 They can then be launched seperately using the submit_FLEXPART.ipynb programme.
 
-********************************************************************************
-********************************************************************************
+Use submit_FLEXPART.sh and submit_FLEXPART.py to submit the job to Nuwa.
+submit_FLEXPART.sh will load the modules required ro run corectly on Nuwa.
+
+submit from the flight directory using:
+
+       sbatch -p o3pwork submit_FLEXPART.sh
+
+If the flight is long, for example Europe to West Coast USA, a longer queue
+might be required. If so use:
+
+      sbatch -p o3plong submit_FLEXPART.sh
+
+### 2.b	check_FP_output_loc.ipynb
 
 Before running the third program, the user must download and prepare the
 corresponding cloud and lightning data that will be used for the comparisons
+with the FLEXPART maximum residence time outputs produced by program 2. If the output
+is not covered by the extent of the GOES 16 and/or GOES 17 satellites further
+analysis will not be possible.
+
+To identify if the flight should be analysed further run the programme
+
+	check_FP_ouput_loc.ipynb
+
+The final output of this is a yes or no for further analysis. In time the
+coverage can be increased for GOES 18, EUMETSAT and other cloud/lightning data
+as it becomes available.
+
+Once it has beeen ascertained that further analysis is possible and before
+running the third program, the user must download and prepare the
+corresponding cloud and lightning data that will be used for the comparisons
 with the FLEXPART maximum residence time outputs produced by program 2. 
+
+### 2.c. GOES_ABI_2015.ipynb GOES_ABI.ipynb GLM_grouping_by_lon_lat.ipynb
 
 ********************************************************************************
 For ABI cloud data:
