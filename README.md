@@ -144,7 +144,7 @@ For ABI cloud data:
 ftp to collect ABI cloud data from ICARE Lille
 
 For 2015:
-#########
+
 	ftp -i ftp.icare.univ-lille1.fr
 	username
 	password
@@ -155,7 +155,7 @@ For 2015:
 	bye
 
 For 2018:
-#########
+
 	ftp -i ftp.icare.univ-lille1.fr
 	username
 	password
