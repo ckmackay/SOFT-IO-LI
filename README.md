@@ -201,7 +201,10 @@ In jupyter, use GLM_grouping_by_lon_lat.ipynb to preprocess data
 
 ********************************************************************************
 
-### 3. tbc.ipynb
+### 3. flight_2018_003_1h_05deg.ipynb
+
+Example of code used to compare the FLEXPART output with GLM and NLDN lightning data 
+and ABI data. This has not yet been automated.  
 
 ********************************************************************************
 
